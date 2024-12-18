@@ -1,1 +1,16 @@
 # Git Ignore
+.vs/
+.vscode/
+ARM/
+Bin/
+bin/
+Obj/
+obj/
+Debug/
+Generated Files/
+Release/
+x64/
+x86/
+*.aps
+*.suo
+*.user

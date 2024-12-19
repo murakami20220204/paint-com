@@ -1,12 +1,13 @@
 # Git Attributes
-* text=auto
-
-# CRLF Files
+.editorconfig   text eol=lf
+.gitattributes  text eol=lf
+.gitignore      text eol=lf
+LICENSE         text eol=lf
 *.appxmanifest  text eol=crlf
 *.c             text eol=crlf
 *.cc            text eol=crlf
 *.cpp           text eol=crlf
-*.cs            text eol=crlf
+*.cs            text eol=crlf diff=csharp
 *.css           text eol=crlf
 *.def           text eol=crlf
 *.filters       text eol=crlf
@@ -22,12 +23,10 @@
 *.js            text eol=crlf
 *.jsproj        text eol=crlf
 *.manifest      text eol=crlf
-*.rc            text eol=crlf
+*.md            text eol=crlf
+*.rc            text eol=crlf working-tree-encoding=utf-16le-bom
 *.rgs           text eol=crlf
 *.sln           text eol=crlf
 *.vcxproj       text eol=crlf
 *.xaml          text eol=crlf
 *.xml           text eol=crlf
-
-# DIFF Files
-*.cs diff=csharp

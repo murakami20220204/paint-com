@@ -129,6 +129,17 @@
   <ItemGroup>
     <Manifest Include="Paint.manifest" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\framewnd.c" />
+    <ClCompile Include="Source\win.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\noexport.h" />
+    <ClInclude Include="Source\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Paint.rc" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,4 +1,5 @@
 # Editor Config
+# Editor Config
 root = true
 
 [*.{c,cpp,h,hpp,idl,rc}]

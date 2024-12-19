@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<assembly
+	manifestVersion="1.0"
+	xmlns="urn:schemas-microsoft-com:asm.v1">
+	<assemblyIdentity
+		name="PaintLibrary"
+		type="win32"
+		version="1.0.0.0" />
+	<file
+		name="PaintLib.dll">
+		<typelib
+			helpdir=""
+			tlbid="{7BE73173-79FB-4F30-91F0-6BDC26E0C625}"
+			version="1.0" />
+		<comClass
+			clsid="{CBE40A9F-CE73-46C8-ADC4-17CE592B765C}"
+			description="HelloWorld"
+			threadingModel="Apartment" />
+	</file>
+	<comInterfaceExternalProxyStub
+		iid="{6E6803DC-26C5-483A-9A8B-6AC8D9F68852}"
+		name="IHelloWorld" />
+</assembly>

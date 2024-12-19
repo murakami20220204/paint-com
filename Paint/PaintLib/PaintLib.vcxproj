@@ -172,6 +172,9 @@
     <ClCompile Include="PaintLib_i.c" />
     <ClCompile Include="self.c" />
   </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="PaintLib.manifest" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

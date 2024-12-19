@@ -1,0 +1,40 @@
+﻿/*
+Copyright 2024 Taichi Murakami.
+DLL がエクスポートするすべての機能を定義します。
+*/
+
+import "oaidl.idl";
+import "ocidl.idl";
+interface IHelloWorld;
+
+/*******************************************************************************
+* Hello World Interface
+*******************************************************************************/
+[uuid(6E6803DC-26C5-483A-9A8B-6AC8D9F68852), pointer_default(unique), object, oleautomation]
+interface IHelloWorld : IUnknown
+{
+	[propget]
+	HRESULT Greeting(
+		[out, retval] BSTR *value);
+
+	[propput]
+	HRESULT Greeting(
+		[in] BSTR value);
+};
+
+/*******************************************************************************
+* Paint Library
+*******************************************************************************/
+[uuid(7BE73173-79FB-4F30-91F0-6BDC26E0C625), version(1.0)]
+library PaintLibrary
+{
+	importlib("stdole32.tlb");
+	interface IHelloWorld;
+
+	[uuid(CBE40A9F-CE73-46C8-ADC4-17CE592B765C)]
+	coclass HelloWorld
+	{
+		[default]
+		interface IHelloWorld;
+	};
+}

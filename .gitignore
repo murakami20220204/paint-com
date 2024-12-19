@@ -14,3 +14,7 @@ x86/
 *.aps
 *.suo
 *.user
+*_h.h
+*_i.c
+*_p.c
+dlldata.c

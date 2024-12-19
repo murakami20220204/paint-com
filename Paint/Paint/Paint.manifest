@@ -27,6 +27,11 @@
 			<assemblyIdentity type="win32" name="Microsoft.Windows.Common-Controls" version="6.0.0.0" processorArchitecture="*" language="*" publicKeyToken="6595b64144ccf1df" />
 		</dependentAssembly>
 	</dependency>-->
+	<dependency>
+		<dependentAssembly>
+			<assemblyIdentity type="win32" name="PaintLibrary" version="1.0.0.0" />
+		</dependentAssembly>
+	</dependency>
 	<trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
 		<security>
 			<requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">

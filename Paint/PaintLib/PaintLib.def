@@ -1,0 +1,16 @@
+LIBRARY PaintLib
+EXPORTS
+LIBID_PaintLibrary
+
+; Interfaces
+IID_IHelloWorld
+
+; Classes
+CLSID_HelloWorld
+
+; Functions
+DllCanUnloadNow     PRIVATE
+DllGetClassObject   PRIVATE
+DllInstall          PRIVATE
+DllRegisterServer   PRIVATE
+DllUnregisterServer PRIVATE

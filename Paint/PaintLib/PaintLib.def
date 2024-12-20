@@ -1,4 +1,4 @@
-LIBRARY PaintLib
+LIBRARY "PaintLib"
 EXPORTS
 LIBID_PaintLibrary
 

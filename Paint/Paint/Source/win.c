@@ -25,20 +25,28 @@ extern int WINAPI _tWinMain(
 	MSG msg;
 	int nResult = -1;
 
-	if (
-		RegisterPrivateClasses(hInstance) &&
-		(hWnd = CreateFrameWindow(hInstance)))
+	if (SUCCEEDED(CoInitializeEx(NULL, COINIT_APARTMENTTHREADED)))
 	{
-		ShowWindow(hWnd, nCmdShow);
-		UpdateWindow(hWnd);
-
-		while (GetMessage(&msg, NULL, 0, 0) > 0)
+		if (RegisterPrivateClasses(hInstance))
 		{
-			TranslateMessage(&msg);
-			DispatchMessage(&msg);
+			hWnd = CreateFrameWindow(hInstance);
+
+			if (hWnd)
+			{
+				ShowWindow(hWnd, nCmdShow);
+				UpdateWindow(hWnd);
+
+				while (GetMessage(&msg, NULL, 0, 0) > 0)
+				{
+					TranslateMessage(&msg);
+					DispatchMessage(&msg);
+				}
+
+				nResult = (int)msg.wParam;
+			}
 		}
 
-		nResult = (int)msg.wParam;
+		CoUninitialize();
 	}
 
 	return nResult;

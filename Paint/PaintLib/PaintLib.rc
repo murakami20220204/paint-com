@@ -24,8 +24,6 @@ LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
 // TEXTINCLUDE
 //
 
-1 TYPELIB "PaintLib.tlb"
-
 1 TEXTINCLUDE 
 BEGIN
     "resource.h\0"
@@ -39,7 +37,7 @@ END
 
 3 TEXTINCLUDE 
 BEGIN
-    "\r\n"
+    "1 TYPELIB ""PaintLib.tlb""\r\n"
     "\0"
 END
 
@@ -104,6 +102,7 @@ END
 // Generated from the TEXTINCLUDE 3 resource.
 //
 
+1 TYPELIB "PaintLib.tlb"
 
 /////////////////////////////////////////////////////////////////////////////
 #endif    // not APSTUDIO_INVOKED

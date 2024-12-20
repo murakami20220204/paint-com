@@ -29,7 +29,10 @@
 	</dependency>-->
 	<dependency>
 		<dependentAssembly>
-			<assemblyIdentity type="win32" name="PaintLibrary" version="1.0.0.0" />
+			<assemblyIdentity
+		name="PaintLib"
+		type="win32"
+		version="1.0.0.0" />
 		</dependentAssembly>
 	</dependency>
 	<trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">

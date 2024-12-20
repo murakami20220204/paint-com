@@ -33,14 +33,8 @@ STDAPI DllInstall(
 STDAPI DllLockServer(
 	_In_ BOOL bLock);
 
-STDAPI DllRegisterServer(
-	void);
-
 STDAPI_(ULONG) DllRelease(
 	_Inout_ PULONG_PTR pCounter);
-
-STDAPI DllUnregisterServer(
-	void);
 
 STDAPI_(ULONG) SelfAddRef(
 	_Inout_ PULONG_PTR pCounter);

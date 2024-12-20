@@ -6,9 +6,17 @@ Copyright 2024 Taichi Murakami.
 #include <windows.h>
 #include "noexport.h"
 #include "resource.h"
+#include "../../PaintLib/Include/hello.h"
 
 static
 LRESULT WINAPI DefProc(
+	_In_ HWND hWnd,
+	_In_ UINT uMsg,
+	_In_ WPARAM wParam,
+	_In_ LPARAM lParam);
+
+static
+LRESULT WINAPI OnAbout(
 	_In_ HWND hWnd,
 	_In_ UINT uMsg,
 	_In_ WPARAM wParam,
@@ -41,6 +49,12 @@ LRESULT CALLBACK FrameWindowProc(
 	case WM_COMMAND:
 		switch (LOWORD(wParam))
 		{
+		case IDM_ABOUT:
+			lpProc = SendMessage;
+			uMsg = FRAME_ABOUT;
+			wParam = 0;
+			lParam = 0;
+			break;
 		case IDM_EXIT:
 			lpProc = SendMessage;
 			uMsg = WM_CLOSE;
@@ -59,6 +73,9 @@ LRESULT CALLBACK FrameWindowProc(
 	case WM_DESTROY:
 		lpProc = OnDestroy;
 		break;
+	case FRAME_ABOUT:
+		lpProc = OnAbout;
+		break;
 	default:
 		lpProc = DefProc;
 		break;
@@ -75,6 +92,34 @@ LRESULT WINAPI DefProc(
 	_In_ LPARAM lParam)
 {
 	return DefFrameProc(hWnd, NULL, uMsg, wParam, lParam);
+}
+
+static
+LRESULT WINAPI OnAbout(
+	_In_ HWND hWnd,
+	_In_ UINT uMsg,
+	_In_ WPARAM wParam,
+	_In_ LPARAM lParam)
+{
+	IHelloWorld *pHello;
+	BSTR bstrGreeting;
+	HRESULT hResult;
+	hResult = CoCreateInstance(&CLSID_HelloWorld, NULL, CLSCTX_ALL, &IID_IHelloWorld, &pHello);
+
+	if (SUCCEEDED(hResult))
+	{
+		hResult = pHello->lpVtbl->GetGreeting(pHello, &bstrGreeting);
+
+		if (SUCCEEDED(hResult))
+		{
+			MessageBox(hWnd, bstrGreeting, TEXT("Greeting"), 0);
+			SysFreeString(bstrGreeting);
+		}
+
+		pHello->lpVtbl->Release(pHello);
+	}
+
+	return 0;
 }
 
 static

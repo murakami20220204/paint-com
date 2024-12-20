@@ -44,9 +44,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PaintLib_i.c">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="dll.c">
       <Filter>ソース ファイル</Filter>
     </ClCompile>

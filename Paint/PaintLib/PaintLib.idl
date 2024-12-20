@@ -10,7 +10,7 @@ interface IHelloWorld;
 /*******************************************************************************
 * Hello World Interface
 *******************************************************************************/
-[uuid(6E6803DC-26C5-483A-9A8B-6AC8D9F68852), pointer_default(unique), object]
+[uuid(6E6803DC-26C5-483A-9A8B-6AC8D9F68852), pointer_default(unique), object, oleautomation]
 interface IHelloWorld : IUnknown
 {
 	[propget]

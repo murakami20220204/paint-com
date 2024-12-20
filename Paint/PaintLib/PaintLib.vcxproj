@@ -169,7 +169,6 @@
     <ClCompile Include="dll.c" />
     <ClCompile Include="factory.c" />
     <ClCompile Include="hello.c" />
-    <ClCompile Include="PaintLib_i.c" />
     <ClCompile Include="self.c" />
   </ItemGroup>
   <ItemGroup>

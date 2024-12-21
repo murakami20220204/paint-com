@@ -1,8 +1,6 @@
 # Git Attributes
-.editorconfig   text eol=lf
-.gitattributes  text eol=lf
-.gitignore      text eol=lf
-LICENSE         text eol=lf
+
+# Extensions
 *.appxmanifest  text eol=crlf
 *.c             text eol=crlf
 *.cc            text eol=crlf
@@ -30,3 +28,10 @@ LICENSE         text eol=lf
 *.vcxproj       text eol=crlf
 *.xaml          text eol=crlf
 *.xml           text eol=crlf
+
+# Files
+.editorconfig   text eol=lf
+.gitattributes  text eol=lf
+.gitignore      text eol=lf
+cpp.hint        text eol=crlf
+LICENSE         text eol=lf
